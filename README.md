@@ -20,7 +20,9 @@ To run the master, run the following command from the project's root directory:
 `java -cp bin com.meyermt.proc.MasterServer --serverPort <port> --filePath <path to file> --timeout <timeout in millisecs>`
 
 **--serverPort** The port that the master will run on.
+
 **--filePath** Path to the file you want the master to serve. This can be absolute or relative.
+
 **--timeout** The amount of time, in milliseconds, that the master should listen for clients before terminating.
 
 ## How to run the Client
@@ -30,4 +32,5 @@ To run the client, run the following command from the project's root directory:
 `java -cp bin com.meyermt.proc.MasterClient --masterIP <ip> --masterPort <port>`
 
 **--masterIP** The IP address the master is running on.
+
 **--masterPort** The port number the master is listening on.
