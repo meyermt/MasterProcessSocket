@@ -16,14 +16,15 @@ public class MasterClient {
     // We will assume that a client's connection to the master is always hardwired, so can be hardcoded
     private final static String MASTER_IP = "127.0.0.1";
     private final static int MASTER_PORT = 12345;
+    private final static String PROC_ARG = "--procNum";
 
     public static void main(String[] args) {
         // Should only have one arg for process number. Used in log file creation
-        if (args.length == 2) {
-            int processNumber = Integer.parseInt(args[0]);
+        if (args.length == 2 && args[0].startsWith(PROC_ARG)) {
+            int processNumber = Integer.parseInt(args[1]);
             runClient(processNumber);
         } else {
-            System.out.println("Illegal number of arguments. Should be run with arguments: <process number>");
+            System.out.println("Illegal arguments. Should be run with arguments: --procNum <process number>");
             System.exit(1);
         }
 
