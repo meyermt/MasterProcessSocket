@@ -45,6 +45,7 @@ public class MasterClient {
                 System.out.println("Got this message: " + clientInput);
             }
             Files.write(outputFilePath, outputLines);
+            client.close();
         } catch (IOException e) {
             System.out.println("Error in socket connection.");
             System.out.println(e.getMessage());
