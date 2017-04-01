@@ -7,7 +7,7 @@ used in file naming, and then the contents of the specified file.
 
 The device running MasterProcessSocket master and clients must have Java 8 installed.
 
-Compile the project by running the follwing command from the project's root directory:
+Compile the project by running the following command from the project's root directory:
 
 `javac -d bin src/main/java/com/meyermt/proc/*.java`
 
